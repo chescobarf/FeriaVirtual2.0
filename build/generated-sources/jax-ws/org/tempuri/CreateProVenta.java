@@ -22,10 +22,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence&gt;
  *         &lt;element name="proVentaJson" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="productosJson" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
-<<<<<<< HEAD
  *         &lt;element name="Solicitud" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
-=======
->>>>>>> d1def7e2df3f8c85901e0d12f992b8d6756143d7
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;

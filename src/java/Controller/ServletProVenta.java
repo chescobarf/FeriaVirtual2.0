@@ -54,15 +54,15 @@ public class ServletProVenta extends HttpServlet {
         String resp = null;
         String alert = null;
        
-        //if(this.createProVenta(JSON, JSON) == false){
-        //    alert = "Error";
-        //    response.sendRedirect("ProcesoVenta.jsp");
-        //}else{
-        //    alert = "Exito";
-        //    System.out.println("Agregado Exitosamente");
-        //}
+        if(this.createProVenta(JSON, JSON) == false){
+            alert = "Error";
+            response.sendRedirect("ProcesoVenta.jsp");
+        }else{
+            alert = "Exito";
+            System.out.println("Agregado Exitosamente");
+        }
  
-        //response.sendRedirect("homeEjecutivo.jsp?alert="+alert);
+        response.sendRedirect("homeEjecutivo.jsp?alert="+alert);
         
     }
 
@@ -105,7 +105,12 @@ public class ServletProVenta extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-
+    private Boolean createProVenta(java.lang.String proVentaJson, java.lang.String productosJson) {
+        // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
+        // If the calling of port operations may lead to race condition some synchronization is required.
+        org.tempuri.IOpenServices port = service.getBasicHttpBindingIOpenServices();
+        return port.createProVenta(proVentaJson, productosJson,0);
+    }
 
 
 

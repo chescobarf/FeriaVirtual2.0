@@ -28,6 +28,9 @@ public class Contrato {
         this.Usuario = Usuario;
     }
 
+    public Contrato(int idcon, Date date, Date date0, String pdf) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     public int getIdContrato() {
         return IdContrato;

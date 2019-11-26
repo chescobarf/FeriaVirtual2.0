@@ -124,6 +124,4 @@ public class ServletComboBox extends HttpServlet {
         return port.getAllProVenta();
     }
 
-    
-
 }

@@ -74,6 +74,11 @@ public class Subasta_Transporte {
     }
 
     public String getRefrigeracion() {
+//        if("1".equals(Refrigeracion)){
+//            return "Necesaria";
+//        }else{
+//            return "No necesita";
+//        }
         return Refrigeracion;
     }
 
@@ -82,6 +87,11 @@ public class Subasta_Transporte {
     }
 
     public String getEstado() {
+//        if("1".equals(Estado)){
+//            return "Abierto";
+//        }else{
+//            return "Cerrado";
+//        }
         return Estado;
     }
 

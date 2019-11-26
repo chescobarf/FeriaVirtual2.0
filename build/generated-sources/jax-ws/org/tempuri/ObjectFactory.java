@@ -43,10 +43,7 @@ public class ObjectFactory {
     private final static QName _CreateSubTransporteSubastaJson_QNAME = new QName("http://tempuri.org/", "subastaJson");
     private final static QName _GetAllSubTransporteResponseGetAllSubTransporteResult_QNAME = new QName("http://tempuri.org/", "GetAllSubTransporteResult");
     private final static QName _GetAllSolicitudVentaActResponseGetAllSolicitudVentaActResult_QNAME = new QName("http://tempuri.org/", "GetAllSolicitudVentaActResult");
-<<<<<<< HEAD
     private final static QName _CreateSolicitudVentaJsonSolicitudVenta_QNAME = new QName("http://tempuri.org/", "JsonSolicitudVenta");
-=======
->>>>>>> d1def7e2df3f8c85901e0d12f992b8d6756143d7
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.tempuri
@@ -373,7 +370,6 @@ public class ObjectFactory {
      */
     public ChangeStateSolicitudVentaResponse createChangeStateSolicitudVentaResponse() {
         return new ChangeStateSolicitudVentaResponse();
-<<<<<<< HEAD
     }
 
     /**
@@ -406,8 +402,6 @@ public class ObjectFactory {
      */
     public ProbabilidadVentaResponse createProbabilidadVentaResponse() {
         return new ProbabilidadVentaResponse();
-=======
->>>>>>> d1def7e2df3f8c85901e0d12f992b8d6756143d7
     }
 
     /**
@@ -543,7 +537,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "JsonProcesoVTA", scope = CreateOfertaPrVta.class)
     public JAXBElement<String> createCreateOfertaPrVtaJsonProcesoVTA(String value) {
         return new JAXBElement<String>(_CreateOfertaPrVtaJsonProcesoVTA_QNAME, String.class, CreateOfertaPrVta.class, value);
-<<<<<<< HEAD
     }
 
     /**
@@ -553,83 +546,51 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "JsonListProducto", scope = CreatePdtoOfertaPrVta.class)
     public JAXBElement<String> createCreatePdtoOfertaPrVtaJsonListProducto(String value) {
         return new JAXBElement<String>(_CreatePdtoOfertaPrVtaJsonListProducto_QNAME, String.class, CreatePdtoOfertaPrVta.class, value);
-=======
->>>>>>> d1def7e2df3f8c85901e0d12f992b8d6756143d7
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-<<<<<<< HEAD
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "GetAllPersonResult", scope = GetAllPersonResponse.class)
     public JAXBElement<String> createGetAllPersonResponseGetAllPersonResult(String value) {
         return new JAXBElement<String>(_GetAllPersonResponseGetAllPersonResult_QNAME, String.class, GetAllPersonResponse.class, value);
-=======
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "JsonListProducto", scope = CreatePdtoOfertaPrVta.class)
-    public JAXBElement<String> createCreatePdtoOfertaPrVtaJsonListProducto(String value) {
-        return new JAXBElement<String>(_CreatePdtoOfertaPrVtaJsonListProducto_QNAME, String.class, CreatePdtoOfertaPrVta.class, value);
->>>>>>> d1def7e2df3f8c85901e0d12f992b8d6756143d7
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-<<<<<<< HEAD
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "subastaJson", scope = CreateSubTransporte.class)
     public JAXBElement<String> createCreateSubTransporteSubastaJson(String value) {
         return new JAXBElement<String>(_CreateSubTransporteSubastaJson_QNAME, String.class, CreateSubTransporte.class, value);
-=======
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "GetAllPersonResult", scope = GetAllPersonResponse.class)
-    public JAXBElement<String> createGetAllPersonResponseGetAllPersonResult(String value) {
-        return new JAXBElement<String>(_GetAllPersonResponseGetAllPersonResult_QNAME, String.class, GetAllPersonResponse.class, value);
->>>>>>> d1def7e2df3f8c85901e0d12f992b8d6756143d7
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-<<<<<<< HEAD
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "GetAllSubTransporteResult", scope = GetAllSubTransporteResponse.class)
     public JAXBElement<String> createGetAllSubTransporteResponseGetAllSubTransporteResult(String value) {
         return new JAXBElement<String>(_GetAllSubTransporteResponseGetAllSubTransporteResult_QNAME, String.class, GetAllSubTransporteResponse.class, value);
-=======
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "subastaJson", scope = CreateSubTransporte.class)
-    public JAXBElement<String> createCreateSubTransporteSubastaJson(String value) {
-        return new JAXBElement<String>(_CreateSubTransporteSubastaJson_QNAME, String.class, CreateSubTransporte.class, value);
->>>>>>> d1def7e2df3f8c85901e0d12f992b8d6756143d7
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-<<<<<<< HEAD
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "GetAllSolicitudVentaActResult", scope = GetAllSolicitudVentaActResponse.class)
     public JAXBElement<String> createGetAllSolicitudVentaActResponseGetAllSolicitudVentaActResult(String value) {
         return new JAXBElement<String>(_GetAllSolicitudVentaActResponseGetAllSolicitudVentaActResult_QNAME, String.class, GetAllSolicitudVentaActResponse.class, value);
-=======
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "GetAllSubTransporteResult", scope = GetAllSubTransporteResponse.class)
-    public JAXBElement<String> createGetAllSubTransporteResponseGetAllSubTransporteResult(String value) {
-        return new JAXBElement<String>(_GetAllSubTransporteResponseGetAllSubTransporteResult_QNAME, String.class, GetAllSubTransporteResponse.class, value);
->>>>>>> d1def7e2df3f8c85901e0d12f992b8d6756143d7
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-<<<<<<< HEAD
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "JsonSolicitudVenta", scope = CreateSolicitudVenta.class)
     public JAXBElement<String> createCreateSolicitudVentaJsonSolicitudVenta(String value) {
         return new JAXBElement<String>(_CreateSolicitudVentaJsonSolicitudVenta_QNAME, String.class, CreateSolicitudVenta.class, value);
-=======
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "GetAllSolicitudVentaActResult", scope = GetAllSolicitudVentaActResponse.class)
-    public JAXBElement<String> createGetAllSolicitudVentaActResponseGetAllSolicitudVentaActResult(String value) {
-        return new JAXBElement<String>(_GetAllSolicitudVentaActResponseGetAllSolicitudVentaActResult_QNAME, String.class, GetAllSolicitudVentaActResponse.class, value);
->>>>>>> d1def7e2df3f8c85901e0d12f992b8d6756143d7
     }
 
 }

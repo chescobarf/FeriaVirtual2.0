@@ -41,7 +41,7 @@
                 <div class="metro">
                     <div class="l1">
                         <li class="item i1">
-                            <a href="SolicitudVenta.jsp"><center> <img src="assets/img/file-document-outline.png" height="160" width="180"  alt="#" ></center></a>
+                            <a href="#"><center> <img src="assets/img/file-document-outline.png" height="160" width="180"  alt="#" ></center></a>
                             <span>Crear Solicitud Compra</span>
                         </li>
                         <li class="item i8">

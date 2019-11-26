@@ -295,7 +295,6 @@ public interface IOpenServices {
         @WebParam(name = "State", targetNamespace = "http://tempuri.org/")
         Integer state);
 
-<<<<<<< HEAD
     /**
      * 
      * @param jsonSolicitudVenta
@@ -324,6 +323,4 @@ public interface IOpenServices {
         @WebParam(name = "RutInteresado", targetNamespace = "http://tempuri.org/")
         Integer rutInteresado);
 
-=======
->>>>>>> d1def7e2df3f8c85901e0d12f992b8d6756143d7
 }

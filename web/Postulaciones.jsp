@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="row justify-content-center" align="center">
-                <form action="ServletComboBox" method="post">
+                <form action="ingresarProductos.jsp" method="post">
                     <label style="color:#FFF; font-size: 20px;"><b>Proceso de Venta - Activos:</b></label>
                     <table class="table table-bordered table-striped table-light table-hover table-hover" >
                         <thead>

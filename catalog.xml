@@ -15,10 +15,10 @@
     <system systemId="http://3.231.239.22/CoreServicios/OpenServices.svc?wsdl" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/3.231.239.22/CoreServicios/OpenServices.svc.wsdl"/>
     <system systemId="http://3.231.239.22/CoreServicios/OpenServices.svc?xsd=xsd0" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/3.231.239.22/CoreServicios/OpenServices.svc.xsd_xsd0.xsd"/>
     <system systemId="http://3.231.239.22/CoreServicios/OpenServices.svc?xsd=xsd1" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/3.231.239.22/CoreServicios/OpenServices.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://3.225.20.205/CoreServicios/OpenServices.svc?wsdl" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/3.225.20.205/CoreServicios/OpenServices.svc.wsdl"/>
+    <system systemId="http://3.225.20.205/CoreServicios/OpenServices.svc?xsd=xsd0" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/3.225.20.205/CoreServicios/OpenServices.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://3.225.20.205/CoreServicios/OpenServices.svc?xsd=xsd1" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/3.225.20.205/CoreServicios/OpenServices.svc.xsd_xsd1.xsd"/>
     <system systemId="http://3.225.20.205/OpenServices.svc?wsdl" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/3.225.20.205/OpenServices.svc.wsdl"/>
     <system systemId="http://3.225.20.205/OpenServices.svc?xsd=xsd0" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/3.225.20.205/OpenServices.svc.xsd_xsd0.xsd"/>
     <system systemId="http://3.225.20.205/OpenServices.svc?xsd=xsd1" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/3.225.20.205/OpenServices.svc.xsd_xsd1.xsd"/>
-    <system systemId="http://3.225.20.205/CoreServicios/OpenServices.svc?wsdl" uri="src/conf/xml-resources/web-service-references/OpenServices_1/wsdl/3.225.20.205/CoreServicios/OpenServices.svc.wsdl"/>
-    <system systemId="http://3.225.20.205/CoreServicios/OpenServices.svc?xsd=xsd0" uri="src/conf/xml-resources/web-service-references/OpenServices_1/wsdl/3.225.20.205/CoreServicios/OpenServices.svc.xsd_xsd0.xsd"/>
-    <system systemId="http://3.225.20.205/CoreServicios/OpenServices.svc?xsd=xsd1" uri="src/conf/xml-resources/web-service-references/OpenServices_1/wsdl/3.225.20.205/CoreServicios/OpenServices.svc.xsd_xsd1.xsd"/>
 </catalog>

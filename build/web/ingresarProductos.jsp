@@ -16,7 +16,6 @@
         <link rel="stylesheet" href="assets/css/customHome.css">
     </head>
     <body>
-        
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="#">Feria Virtual</a>
@@ -43,10 +42,9 @@
                 </div>
             </div>
             <br><br>
-            <form method="post" action="ServletSolProducto">
             <div class="container">
                 <div align="center">
-                    
+                    <form action="ServletConsulta" method="post">
                         <table class="table table-bordered table-striped table-light" >
                             <thead>
                                 <tr>
@@ -57,33 +55,31 @@
                             </thead>
                             <tbody align="center">
                                 <tr>
-                                    <td><input type="text" id="idproceso" name="idproceso" value="<c:out value="${proventa.idProcesoVenta}"/>"></td>
+                                    <td><c:out value="${proventa.idProcesoVenta}"/></td>
                                     <td><c:out value="${proventa.iniFecha}"/></td>
                                     <td><c:out value="${proventa.finFecha}"/></td>
                                 </tr>
                             </tbody>
                         </table>
                 </div>
-                                <center><h1 class="letra">Productos</h1></center> 
+                <h1 class="letra">Productos</h1> 
                 <br>                         
             </div>
-            <center>                  
+
             <div class="container">              
                 <select id="pro" name="productos" class="form-control-lg">
                     <option>Seleccione</option>
                     <c:forEach var="frutas" items="${listaDatosFrutas}">
-                        <option value="${frutas.getIdFruta()}">${frutas.getDescripcion()}</option>  
+                        <option>  ${frutas.getIdFruta()}-${frutas.getDescripcion()}</option>  
                     </c:forEach>   
-                </select>          
+                </select>
                     <input type="text" placeholder="Cantidad" name="numCant" maxlength="5" oninput="this.value=this.value.replace(/[^0-9]/g,'');" class="form-control-lg">
-                    <button type="submit" name="guardar" id="guardar" class="btn btn-success" >Guardar</button>
+                    <button href="#" type="submit" name="guardar" id="guardar" class="btn btn-success" >Guardar</button>
                 <c:set var="idProducto" value="${proventa.idProcesoVenta}"/>    
             </div>
-            
+
             <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-            </center>
-            </form>
     </body>
 </html>

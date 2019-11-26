@@ -46,10 +46,6 @@
                             <a href="#"><center><img src="assets/img/file-document-outline.png" height="160" width="180"  alt="#"></center></a>
                             <span>Ingresar Pedidos</span>
                         </li>
-                        <li class="item i1">
-                            <a href="#"><center> <img src="assets/img/file-document-outline.png" height="160" width="180"  alt="#" ></center></a>
-                            <span>Crear Solicitud Compra</span>
-                        </li>
                         <li class="item i8">
                             <a href="ServletLogout"><center><img  src="assets/img/logout.png" height="160" width="180" align="left" alt="#"></center></a>
                             <span>Cerrar Sesión</span>

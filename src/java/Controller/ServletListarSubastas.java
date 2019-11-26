@@ -70,7 +70,7 @@ public class ServletListarSubastas extends HttpServlet {
                     refrigeracion = "No Necesaria";
                 }
  
-                Subasta_Transporte subTrans = new Subasta_Transporte(temp.getIdSubasta(),temp.getFechaInicio(),temp.getFechaFin(),temp.getCapacidadCarga(),temp.getTamanoCarga(),refrigeracion,estado);
+                Subasta_Transporte subTrans = new Subasta_Transporte(temp.getIdSubasta(),temp.getFechaInicio(),temp.getFechaFin(),temp.getCapacidadCarga(),temp.getTamanoCarga(),temp.getRefrigeracion(),temp.getEstado());
                 
                 SolicSubastas.add(subTrans);
         }

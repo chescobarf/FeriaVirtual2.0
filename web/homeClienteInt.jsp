@@ -50,7 +50,6 @@
                             <a href="ServletLogout"><center><img  src="assets/img/logout.png" height="160" width="180" align="left" alt="#"></center></a>
                             <span>Cerrar Sesión</span>
                         </li>
-                        
                     </div>
                 </div> 
             </div>

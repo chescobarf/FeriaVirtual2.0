@@ -49,10 +49,58 @@
                                 <c:set var="qanto" value="${qanto + 1}" />
                                 <td>${sub.getFechaInicio()}</td>
                                 <td>${sub.getFechaFin()}</td>
-                                <td>${sub.getCapacidadCarga()}</td>
-                                <td>${sub.getTamanoCarga()}</td>
-                                <td>${sub.getRefrigeracion()}</td>
-                                <td>${sub.getEstado()}</td>
+                                <c:set var="capacidadCarga" value="${sub.getCapacidadCarga()}"/>
+                                <c:choose>
+                                    <c:when test="${capacidadCarga < 10}">
+                                        <td>${sub.getCapacidadCarga()} Kilo</td>
+                                    </c:when>
+                                    <c:when test="${capacidadCarga >=10}">
+                                        <td>${sub.getCapacidadCarga()} Kilos</td>
+                                    </c:when>
+                                    <c:when test="${capacidadCarga}>=1000">
+                                        <c:set var="tonelada" value="${sub.getRefrigeracion()/1000}"/>
+                                        <td>${tonelada()} Toneladas</td>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <td>No especifica</td>
+                                    </c:otherwise>
+                                </c:choose>
+                                <c:set var="tamanoCarga" value="${sub.getTamanoCarga()}"/>
+                                <c:choose>
+                                    <c:when test="${tamanoCarga >1}">
+                                        <td>${sub.getTamanoCarga()} Cajas</td>
+                                    </c:when>
+                                    <c:when test="${tamanoCarga <1}">
+                                        <td>${sub.getTamanoCarga()} Caja</td>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <td>No especifica</td>
+                                    </c:otherwise>
+                                </c:choose>
+                                
+                                <c:set var="refrigeracion" value="${sub.getRefrigeracion()}"/>
+                                <c:set var="estado" value="${sub.getEstado()}"/>
+                                <c:set var="1" value="${1}"/>
+                                <c:set var="0" value="${0}"/>
+                                <c:choose>
+                                    <c:when test="${refrigeracion == 1}">
+                                        <td>Necesaria</td>
+                                    </c:when>
+                                    <c:when test="${refrigeracion == 0}">
+                                        <td>Innesaria</td>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <td>No especifica</td>
+                                    </c:otherwise>
+                                </c:choose>
+                                <c:choose>
+                                    <c:when test="${estado == 1}">
+                                        <td>Activo</td>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <td>Inactivo</td>
+                                    </c:otherwise>
+                                </c:choose>
                                 <td><center><span class="btn btn-success"</span>Postular</a></center></td>
                             </tr>
                             </c:forEach>                       
