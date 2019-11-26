@@ -28,7 +28,7 @@ import org.tempuri.OpenServices;
 @WebServlet(name = "ServletComboBox", urlPatterns = {"/ServletComboBox"})
 public class ServletComboBox extends HttpServlet {
 
-    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/3.225.20.205/CoreServicios/OpenServices.svc.wsdl")
+     @WebServiceRef(wsdlLocation = "http://3.225.20.205/OpenServices.svc?wsdl")
     private OpenServices service;
 
     /**
@@ -123,5 +123,7 @@ public class ServletComboBox extends HttpServlet {
         org.tempuri.IOpenServices port = service.getBasicHttpBindingIOpenServices();
         return port.getAllProVenta();
     }
+
+    
 
 }
