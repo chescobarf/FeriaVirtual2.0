@@ -54,6 +54,14 @@ body{
     width: auto;
 }
 
+.logo:hover{
+  transform:scale(0.9);
+}
+
+.hover:hover{
+    transform: scale (0.9);
+}
+
 .formulario
 {
    padding:2px;
@@ -117,7 +125,7 @@ body{
   box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
 }
 
-//Alerta JS
+
 .myAlert-top{
     position: fixed;
     top: 5px; 
