@@ -1,0 +1,44 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : sep 4, 2019, 3:02:59 a.m.
+    Author     : AlexanderArevalo
+*/
+body{
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: 45%;
+    background-position-y: 0px;
+}
+
+.lineVert{
+    background-image: url(../img/lineVert.png);
+    height: 150%;
+    margin-left: 11%;
+    margin-right: 86%;
+}
+
+//Alerta JS
+.myAlert-top{
+    position: fixed;
+    top: 5px; 
+    left:2%;
+    width: 96%;
+}
+
+div.fullscreen {
+  position: absolute;
+  width:100%; 
+  height:960px; 
+  top: 0; 
+  left: 0; 
+  background-color: lightblue;
+}
+
+.alert{
+    display: none;
+}

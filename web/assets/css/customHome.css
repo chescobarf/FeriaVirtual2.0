@@ -1,0 +1,139 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : sep 4, 2019, 3:02:59 a.m.
+    Author     : AlexanderArevalo
+*/
+body{
+    background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(../img/bg.jpg);
+    /*background-repeat: no-repeat;*/
+    background-attachment: scroll;
+    background-position: 45%;
+    background-position-y: 0px;
+    width: 1920px;
+    height: 1080px;
+}
+
+.lineVert{
+    background-image: url(../img/lineVert.png);
+    height: 150%;
+    margin-left: 11%;
+    margin-right: 86%;
+}
+
+.fondo{
+ background-color: firebrick;   
+}
+
+.letra
+{
+    color: #ffffff;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.alinear{
+    margin-left: 40%;
+    margin-right: 86%;
+}
+
+.logo{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 1%;
+    margin-right: 1%;
+    width: auto;
+}
+
+.formulario
+{
+   padding:2px;
+   cursor:pointer;
+   display:block;
+   width:1000px;
+   margin: 0 auto;
+}
+
+.logologo{
+    position: absolute; 
+    top: 0px; left:1px ; 
+    margin-top: 1%; 
+    margin-left: 1%;
+}
+
+.custab{
+    border: black;
+    padding: 5px;
+    margin: 5% 0;
+    box-shadow: 2px 3px 2px #ffffff;
+    transition: 0.5s;
+    }
+.custab:hover{
+    box-shadow:  3px 3px 0px transparent;
+    transition: 0.5s;
+    background: white;
+    }
+
+#save{
+   width: 100%;
+}
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: .1em; left: .3em;
+  font-size: 1.3em;
+  line-height: 0.8;
+  color: #09ad7e;
+  transition: all .2s;
+}
+
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 1.25em; height: 1.25em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+
+//Alerta JS
+.myAlert-top{
+    position: fixed;
+    top: 5px; 
+    left:2%;
+    width: 96%;
+}
+
+div.fullscreen {
+  position: absolute;
+  width:100%; 
+  height:960px; 
+  top: 0; 
+  left: 0; 
+  background-color: lightblue;
+}
+
+.alert{
+    display: none;
+}

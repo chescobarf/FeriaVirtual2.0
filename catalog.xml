@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:50214/OpenServices.svc?wsdl" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/localhost_50214/OpenServices.svc.wsdl"/>
+    <system systemId="http://localhost:50214/OpenServices.svc?xsd=xsd0" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/localhost_50214/OpenServices.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://localhost:50214/OpenServices.svc?xsd=xsd1" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/localhost_50214/OpenServices.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://185.144.158.193:50214/OpenServices.svc?wsdl" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/185.144.158.193_50214/OpenServices.svc.wsdl"/>
+    <system systemId="http://185.144.158.193:50214/OpenServices.svc?xsd=xsd0" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/185.144.158.193_50214/OpenServices.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://185.144.158.193:50214/OpenServices.svc?xsd=xsd1" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/185.144.158.193_50214/OpenServices.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://3.211.129.46/CoreSevices/OpenServices.svc?wsdl" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/3.211.129.46/CoreSevices/OpenServices.svc.wsdl"/>
+    <system systemId="http://3.211.129.46/CoreSevices/OpenServices.svc?xsd=xsd0" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/3.211.129.46/CoreSevices/OpenServices.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://3.211.129.46/CoreSevices/OpenServices.svc?xsd=xsd1" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/3.211.129.46/CoreSevices/OpenServices.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://3.211.129.46/CoreServicios/OpenServices.svc?wsdl" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/3.211.129.46/CoreServicios/OpenServices.svc.wsdl"/>
+    <system systemId="http://3.211.129.46/CoreServicios/OpenServices.svc?xsd=xsd0" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/3.211.129.46/CoreServicios/OpenServices.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://3.211.129.46/CoreServicios/OpenServices.svc?xsd=xsd1" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/3.211.129.46/CoreServicios/OpenServices.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://3.231.239.22/CoreServicios/OpenServices.svc?wsdl" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/3.231.239.22/CoreServicios/OpenServices.svc.wsdl"/>
+    <system systemId="http://3.231.239.22/CoreServicios/OpenServices.svc?xsd=xsd0" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/3.231.239.22/CoreServicios/OpenServices.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://3.231.239.22/CoreServicios/OpenServices.svc?xsd=xsd1" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/3.231.239.22/CoreServicios/OpenServices.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://3.225.20.205/OpenServices.svc?wsdl" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/3.225.20.205/OpenServices.svc.wsdl"/>
+    <system systemId="http://3.225.20.205/OpenServices.svc?xsd=xsd0" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/3.225.20.205/OpenServices.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://3.225.20.205/OpenServices.svc?xsd=xsd1" uri="src/conf/xml-resources/web-service-references/OpenServices/wsdl/3.225.20.205/OpenServices.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://3.225.20.205/CoreServicios/OpenServices.svc?wsdl" uri="src/conf/xml-resources/web-service-references/OpenServices_1/wsdl/3.225.20.205/CoreServicios/OpenServices.svc.wsdl"/>
+    <system systemId="http://3.225.20.205/CoreServicios/OpenServices.svc?xsd=xsd0" uri="src/conf/xml-resources/web-service-references/OpenServices_1/wsdl/3.225.20.205/CoreServicios/OpenServices.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://3.225.20.205/CoreServicios/OpenServices.svc?xsd=xsd1" uri="src/conf/xml-resources/web-service-references/OpenServices_1/wsdl/3.225.20.205/CoreServicios/OpenServices.svc.xsd_xsd1.xsd"/>
+</catalog>
