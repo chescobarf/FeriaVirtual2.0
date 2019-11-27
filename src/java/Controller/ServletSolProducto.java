@@ -5,7 +5,7 @@
  */
 package Controller;
 
-import LibreriaClases.SolicitudProducto;
+import LibreriaClases.OfertaProcesoVenta;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -41,18 +41,21 @@ public class ServletSolProducto extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
       
             //Se capturan los datos desde el JSP
-            int cantidad = Integer.parseInt(request.getParameter("numCant"));
+            int idoferta = 0;
             int idfruta = Integer.parseInt(request.getParameter("productos"));
             int idpro = Integer.parseInt(request.getParameter("idproceso"));
+            int costo = Integer.parseInt(request.getParameter("numcosto"));
+            String calidad = request.getParameter("calidad");
+            int rut = 66554433;
             
-            SolicitudProducto solproducto = new SolicitudProducto(idfruta, idpro, cantidad);
+            OfertaProcesoVenta ofproventa = new OfertaProcesoVenta(idoferta,costo,calidad,rut,idpro);
             
             //Se crea el Json con los datos de la solicitud
             Gson gson = new Gson();
-            String JSON = gson.toJson(solproducto);
+            String JSON = gson.toJson(ofproventa);
             String alert = null;
 
-            if(this.createOfertaPrVta(JSON) == false){
+            if(this.createPdtoOfertaPrVta(JSON) == false){
                alert = "Error";
                response.sendRedirect("ingresarProductos.jsp?alert" + alert);
            }else{
@@ -101,11 +104,13 @@ public class ServletSolProducto extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    private Boolean createOfertaPrVta(java.lang.String jsonProcesoVTA) {
+    private Boolean createPdtoOfertaPrVta(java.lang.String jsonListProducto) {
         // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
         // If the calling of port operations may lead to race condition some synchronization is required.
         org.tempuri.IOpenServices port = service.getBasicHttpBindingIOpenServices();
-        return port.createOfertaPrVta(jsonProcesoVTA);
+        return port.createPdtoOfertaPrVta(jsonListProducto);
     }
+
+    
 
 }

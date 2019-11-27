@@ -8,10 +8,9 @@ package Controller;
 import LibreriaClases.SolicitudVenta;
 import com.google.gson.Gson;
 import java.io.IOException;
-import java.io.PrintWriter;
-import static java.lang.String.format;
-import static java.text.MessageFormat.format;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,7 +27,7 @@ import org.tempuri.OpenServices;
 @WebServlet(name = "ServletSolVenta", urlPatterns = {"/ServletSolVenta"})
 public class ServletSolVenta extends HttpServlet {
 
-    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/3.225.20.205/CoreServicios/OpenServices.svc.wsdl")
+    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/3.225.20.205/OpenServices.svc.wsdl")
     private OpenServices service;
 
     /**
@@ -46,23 +45,24 @@ public class ServletSolVenta extends HttpServlet {
        
         //Se capturan los datos desde el Formlario JSP
         int idsol = 0;
-        String desc = request.getParameter("txtdesc");
+        String desc = request.getParameter("descripcion");
         String tipo = request.getParameter("Tipo");
         String codigo = request.getParameter("txtcodigo");
         String fechacierre = request.getParameter("txtfecha");
+        
         Date date = new Date();
         try {
+           
+           SimpleDateFormat formatter = new SimpleDateFormat("dd/mm/yyyy");
+           date = formatter.parse(fechacierre);
             
-            SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
-            date = formatter.parse(fechacierre);
-        
         } catch (Exception e) {
             
         }
+        
         int rut = Integer.parseInt(request.getParameter("txtrut"));
         int idpro = 0;
         String est = "";
-        
         
         SolicitudVenta solventa = new SolicitudVenta(idsol,desc,tipo,codigo,est,fechacierre,rut,idpro);
         
@@ -73,11 +73,12 @@ public class ServletSolVenta extends HttpServlet {
         
         if(this.createSolicitudVenta(JSON) == false){
                alert = "Error";
-               response.sendRedirect("SolicitudVenta.jsp"+alert);
+               response.sendRedirect("SolicitudVenta.jsp?alert="+alert);
            }else{
               alert = "EXITO";
               response.sendRedirect("homeClienteEx.jsp?alert="+alert);
-           }        
+           }
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -125,5 +126,7 @@ public class ServletSolVenta extends HttpServlet {
         org.tempuri.IOpenServices port = service.getBasicHttpBindingIOpenServices();
         return port.createSolicitudVenta(jsonSolicitudVenta);
     }
+
+
 
 }

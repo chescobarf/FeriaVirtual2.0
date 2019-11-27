@@ -1,0 +1,22 @@
+SMAP
+ingresarProductos_jsp.java
+JSP
+*S JSP
+*F
++ 0 ingresarProductos.jsp
+ingresarProductos.jsp
+*L
+5,41:60
+45:167,5
+45,2:103
+46:185,5
+46,2:107
+47:203,5
+47,13:111
+59:221,11
+60:232,6
+61:238
+61,11:126
+71:263,6
+71,11:139
+*E

@@ -17,6 +17,15 @@ public class OfertaProcesoVenta {
     int ProductorRut;
     int ProcesoVentaId;
 
+    public OfertaProcesoVenta() {
+        
+        IdOferta = 0;
+        Costo = 0;
+        CalidadFruta = "";
+        ProductorRut = 0;
+        ProcesoVentaId = 0;
+    }
+
     public OfertaProcesoVenta(int IdOferta, int Costo, String CalidadFruta, int ProductorRut, int ProcesoVentaId) {
         this.IdOferta = IdOferta;
         this.Costo = Costo;

@@ -5,12 +5,15 @@
  */
 package LibreriaClases;
 
+import java.time.Instant;
+import java.util.Date;
+
 /**
  *
  * @author gerar
  */
 public class SolicitudVenta {
-    
+
     int IdSolicitud;
     String Descripcion;
     String Tipo;
@@ -26,7 +29,7 @@ public class SolicitudVenta {
         this.Tipo = "";
         this.CodigoPostal = "";
         this.Estado = "";
-        this.FechaCierre = "";
+        this.FechaCierre ="";
         this.Persona = 0;
         this.IdProcesoVenta = 0;
     }
@@ -50,12 +53,12 @@ public class SolicitudVenta {
         this.IdSolicitud = IdSolicitud;
     }
 
-    public String getDescripción() {
+    public String getDescripcion() {
         return Descripcion;
     }
 
-    public void setDescripción(String Descripción) {
-        this.Descripcion = Descripción;
+    public void setDescripcion(String Descripcion) {
+        this.Descripcion = Descripcion;
     }
 
     public String getTipo() {
@@ -102,14 +105,14 @@ public class SolicitudVenta {
         return IdProcesoVenta;
     }
 
+
     public void setIdProcesoVenta(int IdProcesoVenta) {
         this.IdProcesoVenta = IdProcesoVenta;
     }
 
     @Override
     public String toString() {
-        return "SolicitudVenta{" + "IdSolicitud=" + IdSolicitud + ", Descripci\u00f3n=" + Descripcion + ", Tipo=" + Tipo + ", CodigoPostal=" + CodigoPostal + ", Estado=" + Estado + ", FechaCierre=" + FechaCierre + ", Persona=" + Persona + ", IdProcesoVenta=" + IdProcesoVenta + '}';
+        return "SolicitudVenta{" + "IdSolicitud=" + IdSolicitud + ", Descripcion=" + Descripcion + ", Tipo=" + Tipo + ", CodigoPostal=" + CodigoPostal + ", Estado=" + Estado + ", FechaCierre=" + FechaCierre + ", Persona=" + Persona + ", IdProcesoVenta=" + IdProcesoVenta + '}';
     }
-    
     
 }

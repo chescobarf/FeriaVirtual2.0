@@ -19,7 +19,7 @@
         
         <div class="container-fluid">
             <div class="container" align="center">
-                <h1 class="letra" >Ingresar Productos</h1>
+                <h1 class="letra" >Producto Oferta</h1>
             </div>
             <br>
             <div class="container">
@@ -59,8 +59,14 @@
                     <c:forEach var="frutas" items="${listaDatosFrutas}">
                         <option value="${frutas.getIdFruta()}">${frutas.getDescripcion()}</option>  
                     </c:forEach>   
-                </select>          
-                    <input type="text" placeholder="Cantidad" name="numCant" maxlength="5" oninput="this.value=this.value.replace(/[^0-9]/g,'');" class="form-control-lg">
+                </select>            
+                    <input type="text" placeholder="Costo" name="numcosto" maxlength="5" oninput="this.value=this.value.replace(/[^0-9]/g,'');" class="form-control-lg">
+                    <select name="calidad" class="form-control-lg">
+                        <option>Alta</option>
+                        <option>Baja</option>
+                        <option>Moderada</option>
+                        <option>Destacada</option>
+                    </select>
                     <button type="submit" name="guardar" id="guardar" class="btn btn-success" >Guardar</button>
                 <c:set var="idProducto" value="${proventa.idProcesoVenta}"/>    
             </div>

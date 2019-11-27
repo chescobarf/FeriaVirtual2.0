@@ -96,17 +96,14 @@
                                     <div class="column">
                                         <label for="usuario" class="label">Rut: </label>
                                         <div class="control has-icons-left">
-                                            <input type="text" name="txtrut" class="input" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="8" requiered>
+                                            <input value="${sessionScope.usuario}" type="text" name="txtrut" class="input" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="8" requiered>
                                             <span class="icon is-small is-left">
                                                 <i class="fa fa-user"></i>
                                             </span>
                                         </div>
                                     </div>
                                 </div>
-                                
-
-                                <input type="submit" class="button is-info" id="save">
-
+                                <button type="submit" name="guardar" id="guardar" class="btn btn-success" >Guardar</button>
                             </form>
                         </div>
                     </article>
