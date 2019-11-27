@@ -35,14 +35,14 @@
                         <table class="table table-bordered table-striped table-light" >
                             <thead>
                                 <tr>
-                                    <th scope="col"><center>Id Proceso</center></th>
+                                    <th scope="col"><center>Proceso de Venta Numero</center></th>
                                     <th scope="col"><center>Fecha Inicio</center></th>
                                     <th scope="col"><center>Fecha Fin</center></th>
                             </tr>
                             </thead>
                             <tbody align="center">
                                 <tr>
-                                    <td><input type="text" id="idproceso" name="idproceso" value="<c:out value="${proventa.idProcesoVenta}"/>"></td>
+                                    <td><input type="text" id="idproceso" name="idproceso" readonly="readonly" value="<c:out value="${proventa.idProcesoVenta}"/>"></td>
                                     <td><c:out value="${proventa.iniFecha}"/></td>
                                     <td><c:out value="${proventa.finFecha}"/></td>
                                 </tr>
