@@ -91,7 +91,7 @@ public class ServletListarSubastas extends HttpServlet {
                 
                 Subasta_Transporte subTrans = new  Subasta_Transporte(temp.getIdSubasta(),fechaini,fechafin,temp.getCapacidadCarga(),temp.getTamanoCarga(),temp.getRefrigeracion(),temp.getEstado());
                 
-                
+                //temp.getFechaInicio(),temp.getFechaFin()
                 
                 SolicSubastas.add(subTrans);
         }
