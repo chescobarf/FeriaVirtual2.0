@@ -74,7 +74,7 @@ public final class ingresarProductos_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("        \r\n");
       out.write("        <div class=\"container-fluid\">\r\n");
       out.write("            <div class=\"container\" align=\"center\">\r\n");
-      out.write("                <h1 class=\"letra\" >Ingresar Productos</h1>\r\n");
+      out.write("                <h1 class=\"letra\" >Producto - Oferta</h1>\r\n");
       out.write("            </div>\r\n");
       out.write("            <br>\r\n");
       out.write("            <div class=\"container\">\r\n");
@@ -90,14 +90,14 @@ public final class ingresarProductos_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("                        <table class=\"table table-bordered table-striped table-light\" >\r\n");
       out.write("                            <thead>\r\n");
       out.write("                                <tr>\r\n");
-      out.write("                                    <th scope=\"col\"><center>Id Proceso</center></th>\r\n");
+      out.write("                                    <th scope=\"col\"><center>Proceso de Venta Numero</center></th>\r\n");
       out.write("                                    <th scope=\"col\"><center>Fecha Inicio</center></th>\r\n");
       out.write("                                    <th scope=\"col\"><center>Fecha Fin</center></th>\r\n");
       out.write("                            </tr>\r\n");
       out.write("                            </thead>\r\n");
       out.write("                            <tbody align=\"center\">\r\n");
       out.write("                                <tr>\r\n");
-      out.write("                                    <td><input type=\"text\" id=\"idproceso\" name=\"idproceso\" value=\"");
+      out.write("                                    <td><input type=\"text\" id=\"idproceso\" name=\"idproceso\" readonly=\"readonly\" value=\"");
       if (_jspx_meth_c_out_0(_jspx_page_context))
         return;
       out.write("\"></td>\r\n");
@@ -118,19 +118,19 @@ public final class ingresarProductos_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("            </div>\r\n");
       out.write("            <center>                  \r\n");
       out.write("            <div class=\"container\">              \r\n");
-      out.write("                <select id=\"pro\" name=\"productos\" class=\"form-control-lg\">\r\n");
+      out.write("                <!--<select id=\"pro\" name=\"productos\" class=\"form-control-lg\">\r\n");
       out.write("                    <option>Seleccione</option>\r\n");
       out.write("                    ");
       if (_jspx_meth_c_forEach_0(_jspx_page_context))
         return;
-      out.write("   \r\n");
-      out.write("                </select>            \r\n");
+      out.write("\r\n");
+      out.write("                </select>-->    \r\n");
       out.write("                    <input type=\"text\" placeholder=\"Costo\" name=\"numcosto\" maxlength=\"5\" oninput=\"this.value=this.value.replace(/[^0-9]/g,'');\" class=\"form-control-lg\">\r\n");
       out.write("                    <select name=\"calidad\" class=\"form-control-lg\">\r\n");
-      out.write("                        <option>Alta</option>\r\n");
-      out.write("                        <option>Baja</option>\r\n");
-      out.write("                        <option>Moderada</option>\r\n");
-      out.write("                        <option>Destacada</option>\r\n");
+      out.write("                        <option value=\"alta\">Alta</option>\r\n");
+      out.write("                        <option value=\"baja\">Baja</option>\r\n");
+      out.write("                        <option value=\"moderada\">Moderada</option>\r\n");
+      out.write("                        <option value=\"destacada\">Destacada</option>\r\n");
       out.write("                    </select>\r\n");
       out.write("                    <button type=\"submit\" name=\"guardar\" id=\"guardar\" class=\"btn btn-success\" >Guardar</button>\r\n");
       out.write("                ");

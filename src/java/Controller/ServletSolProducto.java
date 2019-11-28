@@ -8,7 +8,6 @@ package Controller;
 import LibreriaClases.OfertaProcesoVenta;
 import com.google.gson.Gson;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -39,30 +38,29 @@ public class ServletSolProducto extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-      
-            //Se capturan los datos desde el JSP
-            int idoferta = 0;
-            int idfruta = Integer.parseInt(request.getParameter("productos"));
-            int idpro = Integer.parseInt(request.getParameter("idproceso"));
-            int costo = Integer.parseInt(request.getParameter("numcosto"));
-            String calidad = request.getParameter("calidad");
-            int rut = 66554433;
-            
-            OfertaProcesoVenta ofproventa = new OfertaProcesoVenta(idoferta,costo,calidad,rut,idpro);
-            
-            //Se crea el Json con los datos de la solicitud
-            Gson gson = new Gson();
-            String JSON = gson.toJson(ofproventa);
-            String alert = null;
 
-            if(this.createPdtoOfertaPrVta(JSON) == false){
-               alert = "Error";
-               response.sendRedirect("ingresarProductos.jsp?alert" + alert);
-           }else{
-              alert = "EXITO";
-              response.sendRedirect("homeProductor.jsp?alert="+alert);
-           }    
-        
+        //Se capturan los datos desde el JSP
+        int idoferta = 0;
+        int idpro = Integer.parseInt(request.getParameter("idproceso"));
+        int costo = Integer.parseInt(request.getParameter("numcosto"));
+        String calidad = request.getParameter("calidad");
+        int rut = 25514709;
+
+        OfertaProcesoVenta ofproventa = new OfertaProcesoVenta(idoferta, costo, calidad, rut, idpro);
+
+        //Se crea el Json con los datos de la solicitud
+        Gson gson = new Gson();
+        String JSON = gson.toJson(ofproventa);
+        String alert = null;
+
+        if (this.createPdtoOfertaPrVta(JSON) == false) {
+            alert = "Error";
+            response.sendRedirect("ingresarProductos.jsp?alert" + alert);
+        } else {
+            alert = "EXITO";
+            response.sendRedirect("homeProductor.jsp?alert=" + alert);
+        }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -110,7 +108,5 @@ public class ServletSolProducto extends HttpServlet {
         org.tempuri.IOpenServices port = service.getBasicHttpBindingIOpenServices();
         return port.createPdtoOfertaPrVta(jsonListProducto);
     }
-
-    
 
 }
