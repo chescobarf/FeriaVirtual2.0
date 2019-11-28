@@ -94,9 +94,9 @@
                                 </div>
                                 <div class="columns">
                                     <div class="column">
-                                        <label for="usuario" class="label">Rut: </label>
-                                        <div class="control has-icons-left">
-                                            <input value="${sessionScope.usuario}" type="text" name="txtrut" class="input" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="8" requiered>
+                                        <label for="usuario" class="label" style="visibility:hidden">Rut: </label>
+                                        <div class="control has-icons-left" style="visibility:hidden">
+                                            <input value="${sessionScope.usuario}" type="text" name="txtrut" class="input" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="8" style="visibility:hidden" requiered>
                                             <span class="icon is-small is-left">
                                                 <i class="fa fa-user"></i>
                                             </span>

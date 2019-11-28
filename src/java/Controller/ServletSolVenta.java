@@ -27,7 +27,7 @@ import org.tempuri.OpenServices;
 @WebServlet(name = "ServletSolVenta", urlPatterns = {"/ServletSolVenta"})
 public class ServletSolVenta extends HttpServlet {
 
-    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/3.225.20.205/OpenServices.svc.wsdl")
+    @WebServiceRef(wsdlLocation = "WEB-INF/wsdl/3.225.20.205/CoreServicios/OpenServices.svc.wsdl")
     private OpenServices service;
 
     /**
@@ -42,7 +42,7 @@ public class ServletSolVenta extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-       
+
         //Se capturan los datos desde el Formlario JSP
         int idsol = 0;
         String desc = request.getParameter("descripcion");
@@ -50,35 +50,32 @@ public class ServletSolVenta extends HttpServlet {
         String codigo = request.getParameter("txtcodigo");
         String fechacierre = request.getParameter("txtfecha");
         
-        Date date = new Date();
-        try {
-           
-           SimpleDateFormat formatter = new SimpleDateFormat("dd/mm/yyyy");
-           date = formatter.parse(fechacierre);
-            
-        } catch (Exception e) {
-            
-        }
+        String ano = fechacierre.substring(0,4);
+        String mes = fechacierre.substring(5,7);
+        String dia = fechacierre.substring(8,10);
+        
+        String fecha = dia+"/"+mes+"/"+ano;
         
         int rut = Integer.parseInt(request.getParameter("txtrut"));
         int idpro = 0;
         String est = "";
         
-        SolicitudVenta solventa = new SolicitudVenta(idsol,desc,tipo,codigo,est,fechacierre,rut,idpro);
-        
+        //Se crea el Objeto con todos los datos capturados
+        SolicitudVenta solventa = new SolicitudVenta(idsol, desc, tipo, codigo, est, fecha, rut, idpro);
+
         //Se crea JSON que contiene datos del Usuario
-            Gson gson = new Gson();
-            String JSON = gson.toJson(solventa);
-            String alert = null;
-        
-        if(this.createSolicitudVenta(JSON) == false){
-               alert = "Error";
-               response.sendRedirect("SolicitudVenta.jsp?alert="+alert);
-           }else{
-              alert = "EXITO";
-              response.sendRedirect("homeClienteEx.jsp?alert="+alert);
-           }
-        
+        Gson gson = new Gson();
+        String JSON = gson.toJson(solventa);
+        String alert = null;
+
+        if (this.createSolicitudVenta(JSON) == false) {
+            alert = "Error";
+            response.sendRedirect("SolicitudVenta.jsp?alert=" + alert);
+        } else {
+            alert = "EXITO";
+            response.sendRedirect("homeClienteEx.jsp?alert=" + alert);
+        }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -126,7 +123,5 @@ public class ServletSolVenta extends HttpServlet {
         org.tempuri.IOpenServices port = service.getBasicHttpBindingIOpenServices();
         return port.createSolicitudVenta(jsonSolicitudVenta);
     }
-
-
 
 }

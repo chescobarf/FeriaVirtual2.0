@@ -31,7 +31,7 @@ import org.tempuri.OpenServices;
 @WebServlet(name = "ListaProVenta", urlPatterns = {"/ListaProVenta"})
 public class ListaProVenta extends HttpServlet {
 
-    @WebServiceRef(wsdlLocation = "http://3.225.20.205/OpenServices.svc?wsdl")
+    @WebServiceRef(wsdlLocation = "http://3.225.20.205/CoreServicios/OpenServices.svc?wsdl")
     private OpenServices service;
 
     /**

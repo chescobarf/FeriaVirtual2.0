@@ -194,6 +194,37 @@ public interface IOpenServices {
 
     /**
      * 
+     * @param idPV
+     * @return
+     *     returns java.lang.Integer
+     */
+    @WebMethod(operationName = "GetCantOfertasPV", action = "http://tempuri.org/IOpenServices/GetCantOfertasPV")
+    @WebResult(name = "GetCantOfertasPVResult", targetNamespace = "http://tempuri.org/")
+    @RequestWrapper(localName = "GetCantOfertasPV", targetNamespace = "http://tempuri.org/", className = "org.tempuri.GetCantOfertasPV")
+    @ResponseWrapper(localName = "GetCantOfertasPVResponse", targetNamespace = "http://tempuri.org/", className = "org.tempuri.GetCantOfertasPVResponse")
+    public Integer getCantOfertasPV(
+        @WebParam(name = "idPV", targetNamespace = "http://tempuri.org/")
+        Integer idPV);
+
+    /**
+     * 
+     * @param idPv
+     * @param state
+     * @return
+     *     returns java.lang.Boolean
+     */
+    @WebMethod(operationName = "ChangeEstadoPv", action = "http://tempuri.org/IOpenServices/ChangeEstadoPv")
+    @WebResult(name = "ChangeEstadoPvResult", targetNamespace = "http://tempuri.org/")
+    @RequestWrapper(localName = "ChangeEstadoPv", targetNamespace = "http://tempuri.org/", className = "org.tempuri.ChangeEstadoPv")
+    @ResponseWrapper(localName = "ChangeEstadoPvResponse", targetNamespace = "http://tempuri.org/", className = "org.tempuri.ChangeEstadoPvResponse")
+    public Boolean changeEstadoPv(
+        @WebParam(name = "idPv", targetNamespace = "http://tempuri.org/")
+        Integer idPv,
+        @WebParam(name = "state", targetNamespace = "http://tempuri.org/")
+        Integer state);
+
+    /**
+     * 
      * @param jsonProcesoVTA
      * @return
      *     returns java.lang.Boolean
@@ -205,20 +236,6 @@ public interface IOpenServices {
     public Boolean createOfertaPrVta(
         @WebParam(name = "JsonProcesoVTA", targetNamespace = "http://tempuri.org/")
         String jsonProcesoVTA);
-
-    /**
-     * 
-     * @param jsonListProducto
-     * @return
-     *     returns java.lang.Boolean
-     */
-    @WebMethod(operationName = "CreatePdtoOfertaPrVta", action = "http://tempuri.org/IOpenServices/CreatePdtoOfertaPrVta")
-    @WebResult(name = "CreatePdtoOfertaPrVtaResult", targetNamespace = "http://tempuri.org/")
-    @RequestWrapper(localName = "CreatePdtoOfertaPrVta", targetNamespace = "http://tempuri.org/", className = "org.tempuri.CreatePdtoOfertaPrVta")
-    @ResponseWrapper(localName = "CreatePdtoOfertaPrVtaResponse", targetNamespace = "http://tempuri.org/", className = "org.tempuri.CreatePdtoOfertaPrVtaResponse")
-    public Boolean createPdtoOfertaPrVta(
-        @WebParam(name = "JsonListProducto", targetNamespace = "http://tempuri.org/")
-        String jsonListProducto);
 
     /**
      * 
@@ -322,5 +339,19 @@ public interface IOpenServices {
     public Integer probabilidadVenta(
         @WebParam(name = "RutInteresado", targetNamespace = "http://tempuri.org/")
         Integer rutInteresado);
+
+    /**
+     * 
+     * @param idPv
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod(operationName = "FinProcesoVenta", action = "http://tempuri.org/IOpenServices/FinProcesoVenta")
+    @WebResult(name = "FinProcesoVentaResult", targetNamespace = "http://tempuri.org/")
+    @RequestWrapper(localName = "FinProcesoVenta", targetNamespace = "http://tempuri.org/", className = "org.tempuri.FinProcesoVenta")
+    @ResponseWrapper(localName = "FinProcesoVentaResponse", targetNamespace = "http://tempuri.org/", className = "org.tempuri.FinProcesoVentaResponse")
+    public String finProcesoVenta(
+        @WebParam(name = "idPv", targetNamespace = "http://tempuri.org/")
+        Integer idPv);
 
 }

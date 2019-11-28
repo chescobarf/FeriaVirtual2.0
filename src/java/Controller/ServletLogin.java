@@ -22,7 +22,7 @@ import org.tempuri.OpenServices;
  * @author AlexanderArevalo
  */
 public class ServletLogin extends HttpServlet {
-    @WebServiceRef(wsdlLocation = "http://3.225.20.205/OpenServices.svc?wsdl")
+    @WebServiceRef(wsdlLocation = "http://3.225.20.205/CoreServicios/OpenServices.svc?wsdl")
     private OpenServices service;
 
     /**

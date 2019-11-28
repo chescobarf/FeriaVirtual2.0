@@ -3,7 +3,6 @@ package org.tempuri;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -18,7 +17,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="CreatePdtoOfertaPrVtaResult" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
+ *         &lt;element name="idPV" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -29,36 +28,35 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "createPdtoOfertaPrVtaResult"
+    "idPV"
 })
-@XmlRootElement(name = "CreatePdtoOfertaPrVtaResponse")
-public class CreatePdtoOfertaPrVtaResponse {
+@XmlRootElement(name = "GetCantOfertasPV")
+public class GetCantOfertasPV {
 
-    @XmlElement(name = "CreatePdtoOfertaPrVtaResult")
-    protected Boolean createPdtoOfertaPrVtaResult;
+    protected Integer idPV;
 
     /**
-     * Obtiene el valor de la propiedad createPdtoOfertaPrVtaResult.
+     * Obtiene el valor de la propiedad idPV.
      * 
      * @return
      *     possible object is
-     *     {@link Boolean }
+     *     {@link Integer }
      *     
      */
-    public Boolean isCreatePdtoOfertaPrVtaResult() {
-        return createPdtoOfertaPrVtaResult;
+    public Integer getIdPV() {
+        return idPV;
     }
 
     /**
-     * Define el valor de la propiedad createPdtoOfertaPrVtaResult.
+     * Define el valor de la propiedad idPV.
      * 
      * @param value
      *     allowed object is
-     *     {@link Boolean }
+     *     {@link Integer }
      *     
      */
-    public void setCreatePdtoOfertaPrVtaResult(Boolean value) {
-        this.createPdtoOfertaPrVtaResult = value;
+    public void setIdPV(Integer value) {
+        this.idPV = value;
     }
 
 }

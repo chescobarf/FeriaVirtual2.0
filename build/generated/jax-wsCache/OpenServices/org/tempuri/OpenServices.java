@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "OpenServices", targetNamespace = "http://tempuri.org/", wsdlLocation = "http://3.225.20.205/OpenServices.svc?wsdl")
+@WebServiceClient(name = "OpenServices", targetNamespace = "http://tempuri.org/", wsdlLocation = "http://3.225.20.205/CoreServicios/OpenServices.svc?wsdl")
 public class OpenServices
     extends Service
 {
@@ -30,7 +30,7 @@ public class OpenServices
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://3.225.20.205/OpenServices.svc?wsdl");
+            url = new URL("http://3.225.20.205/CoreServicios/OpenServices.svc?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

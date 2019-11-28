@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="assets/css/customHome.css">
     </head>
     <body>
-        
+
         <div class="container-fluid">
             <div class="container" align="center">
                 <h1 class="letra" >Producto - Oferta</h1>
@@ -29,15 +29,14 @@
             </div>
             <br><br>
             <form method="post" action="ServletSolProducto">
-            <div class="container">
-                <div align="center">
-                    
+                <div class="container">
+                    <div align="center">
                         <table class="table table-bordered table-striped table-light" >
                             <thead>
                                 <tr>
                                     <th scope="col"><center>Proceso de Venta Numero</center></th>
-                                    <th scope="col"><center>Fecha Inicio</center></th>
-                                    <th scope="col"><center>Fecha Fin</center></th>
+                            <th scope="col"><center>Fecha Inicio</center></th>
+                            <th scope="col"><center>Fecha Fin</center></th>
                             </tr>
                             </thead>
                             <tbody align="center">
@@ -48,33 +47,31 @@
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                    <center><h1 class="letra">Productos</h1></center> 
+                    <br>                         
                 </div>
-                                <center><h1 class="letra">Productos</h1></center> 
-                <br>                         
-            </div>
-            <center>                  
-            <div class="container">              
-                <!--<select id="pro" name="productos" class="form-control-lg">
-                    <option>Seleccione</option>
-                    <c:forEach var="frutas" items="${listaDatosFrutas}">
-                        <option value="${frutas.getIdFruta()}">${frutas.getDescripcion()}</option>  
-                    </c:forEach>
-                </select>-->    
-                    <input type="text" placeholder="Costo" name="numcosto" maxlength="5" oninput="this.value=this.value.replace(/[^0-9]/g,'');" class="form-control-lg">
-                    <select name="calidad" class="form-control-lg">
-                        <option value="alta">Alta</option>
-                        <option value="baja">Baja</option>
-                        <option value="moderada">Moderada</option>
-                        <option value="destacada">Destacada</option>
-                    </select>
-                    <button type="submit" name="guardar" id="guardar" class="btn btn-success" >Guardar</button>
-                <c:set var="idProducto" value="${proventa.idProcesoVenta}"/>    
-            </div>
-            </div>
-            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-            </center>
+                <center>
+                    <div class="container">              
+                        <!--<select id="pro" name="productos" class="form-control-lg">
+                            <option>Seleccione</option>
+                        <c:forEach var="frutas" items="${listaDatosFrutas}">
+                            <option value="${frutas.getIdFruta()}">${frutas.getDescripcion()}</option>  
+                        </c:forEach>
+                    </select>-->
+                        <input value="${sessionScope.usuario}" type="text" name="rut" class="input" oninput="this.value=this.value.replace(/[^0-9]/g,'');" maxlength="8" style="visibility:hidden" requiered>
+                        <input type="text" placeholder="Costo" name="numcosto" maxlength="5" oninput="this.value=this.value.replace(/[^0-9]/g,'');" class="form-control-lg">
+                        <select name="calidad" class="form-control-lg">
+                            <option value="Alta">Alta</option>
+                            <option value="Baja">Baja</option>
+                            <option value="Moderada">Moderada</option>
+                            <option value="Destacada">Destacada</option>
+                        </select>
+                        <button type="submit" name="guardar" id="guardar" class="btn btn-success" >Guardar</button>
+                        <c:set var="idProducto" value="${proventa.idProcesoVenta}"/>    
+                    </div>
+                </center>
             </form>
+        </div>
     </body>
 </html>

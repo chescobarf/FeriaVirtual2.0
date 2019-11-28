@@ -23,7 +23,7 @@ import org.tempuri.OpenServices;
 @WebServlet(name = "ServletSolProducto", urlPatterns = {"/ServletSolProducto"})
 public class ServletSolProducto extends HttpServlet {
 
-    @WebServiceRef(wsdlLocation = "http://3.225.20.205/OpenServices.svc?wsdl")
+    @WebServiceRef(wsdlLocation = "http://3.225.20.205/CoreServicios/OpenServices.svc?wsdl")
     private OpenServices service;
 
     /**
@@ -44,7 +44,7 @@ public class ServletSolProducto extends HttpServlet {
         int idpro = Integer.parseInt(request.getParameter("idproceso"));
         int costo = Integer.parseInt(request.getParameter("numcosto"));
         String calidad = request.getParameter("calidad");
-        int rut = 25514709;
+        int rut = Integer.parseInt(request.getParameter("rut"));
 
         OfertaProcesoVenta ofproventa = new OfertaProcesoVenta(idoferta, costo, calidad, rut, idpro);
 
@@ -53,12 +53,13 @@ public class ServletSolProducto extends HttpServlet {
         String JSON = gson.toJson(ofproventa);
         String alert = null;
 
-        if (this.createPdtoOfertaPrVta(JSON) == false) {
+        if (this.createOfertaPrVta(JSON) == false) {
             alert = "Error";
             response.sendRedirect("ingresarProductos.jsp?alert" + alert);
         } else {
             alert = "EXITO";
             response.sendRedirect("homeProductor.jsp?alert=" + alert);
+            
         }
 
     }
@@ -102,11 +103,14 @@ public class ServletSolProducto extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    private Boolean createPdtoOfertaPrVta(java.lang.String jsonListProducto) {
+    private Boolean createOfertaPrVta(java.lang.String jsonProcesoVTA) {
         // Note that the injected javax.xml.ws.Service reference as well as port objects are not thread safe.
         // If the calling of port operations may lead to race condition some synchronization is required.
         org.tempuri.IOpenServices port = service.getBasicHttpBindingIOpenServices();
-        return port.createPdtoOfertaPrVta(jsonListProducto);
+        return port.createOfertaPrVta(jsonProcesoVTA);
     }
+
+    
+
 
 }
