@@ -5,12 +5,10 @@
  */
 package Controller;
 
-import LibreriaClases.SolicitudProducto;
 import LibreriaClases.Subasta_Transporte;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
