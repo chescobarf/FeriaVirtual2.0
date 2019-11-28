@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="JsonListProducto" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="FinProcesoVentaResult" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -30,36 +30,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "jsonListProducto"
+    "finProcesoVentaResult"
 })
-@XmlRootElement(name = "CreatePdtoOfertaPrVta")
-public class CreatePdtoOfertaPrVta {
+@XmlRootElement(name = "FinProcesoVentaResponse")
+public class FinProcesoVentaResponse {
 
-    @XmlElementRef(name = "JsonListProducto", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
-    protected JAXBElement<String> jsonListProducto;
+    @XmlElementRef(name = "FinProcesoVentaResult", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> finProcesoVentaResult;
 
     /**
-     * Obtiene el valor de la propiedad jsonListProducto.
+     * Obtiene el valor de la propiedad finProcesoVentaResult.
      * 
      * @return
      *     possible object is
      *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public JAXBElement<String> getJsonListProducto() {
-        return jsonListProducto;
+    public JAXBElement<String> getFinProcesoVentaResult() {
+        return finProcesoVentaResult;
     }
 
     /**
-     * Define el valor de la propiedad jsonListProducto.
+     * Define el valor de la propiedad finProcesoVentaResult.
      * 
      * @param value
      *     allowed object is
      *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setJsonListProducto(JAXBElement<String> value) {
-        this.jsonListProducto = value;
+    public void setFinProcesoVentaResult(JAXBElement<String> value) {
+        this.finProcesoVentaResult = value;
     }
 
 }

@@ -38,12 +38,12 @@ public class ObjectFactory {
     private final static QName _GetAllProVentaResponseGetAllProVentaResult_QNAME = new QName("http://tempuri.org/", "GetAllProVentaResult");
     private final static QName _GetAllProductPVResponseGetAllProductPVResult_QNAME = new QName("http://tempuri.org/", "GetAllProductPVResult");
     private final static QName _CreateOfertaPrVtaJsonProcesoVTA_QNAME = new QName("http://tempuri.org/", "JsonProcesoVTA");
-    private final static QName _CreatePdtoOfertaPrVtaJsonListProducto_QNAME = new QName("http://tempuri.org/", "JsonListProducto");
     private final static QName _GetAllPersonResponseGetAllPersonResult_QNAME = new QName("http://tempuri.org/", "GetAllPersonResult");
     private final static QName _CreateSubTransporteSubastaJson_QNAME = new QName("http://tempuri.org/", "subastaJson");
     private final static QName _GetAllSubTransporteResponseGetAllSubTransporteResult_QNAME = new QName("http://tempuri.org/", "GetAllSubTransporteResult");
     private final static QName _GetAllSolicitudVentaActResponseGetAllSolicitudVentaActResult_QNAME = new QName("http://tempuri.org/", "GetAllSolicitudVentaActResult");
     private final static QName _CreateSolicitudVentaJsonSolicitudVenta_QNAME = new QName("http://tempuri.org/", "JsonSolicitudVenta");
+    private final static QName _FinProcesoVentaResponseFinProcesoVentaResult_QNAME = new QName("http://tempuri.org/", "FinProcesoVentaResult");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.tempuri
@@ -245,6 +245,38 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetCantOfertasPV }
+     * 
+     */
+    public GetCantOfertasPV createGetCantOfertasPV() {
+        return new GetCantOfertasPV();
+    }
+
+    /**
+     * Create an instance of {@link GetCantOfertasPVResponse }
+     * 
+     */
+    public GetCantOfertasPVResponse createGetCantOfertasPVResponse() {
+        return new GetCantOfertasPVResponse();
+    }
+
+    /**
+     * Create an instance of {@link ChangeEstadoPv }
+     * 
+     */
+    public ChangeEstadoPv createChangeEstadoPv() {
+        return new ChangeEstadoPv();
+    }
+
+    /**
+     * Create an instance of {@link ChangeEstadoPvResponse }
+     * 
+     */
+    public ChangeEstadoPvResponse createChangeEstadoPvResponse() {
+        return new ChangeEstadoPvResponse();
+    }
+
+    /**
      * Create an instance of {@link CreateOfertaPrVta }
      * 
      */
@@ -258,22 +290,6 @@ public class ObjectFactory {
      */
     public CreateOfertaPrVtaResponse createCreateOfertaPrVtaResponse() {
         return new CreateOfertaPrVtaResponse();
-    }
-
-    /**
-     * Create an instance of {@link CreatePdtoOfertaPrVta }
-     * 
-     */
-    public CreatePdtoOfertaPrVta createCreatePdtoOfertaPrVta() {
-        return new CreatePdtoOfertaPrVta();
-    }
-
-    /**
-     * Create an instance of {@link CreatePdtoOfertaPrVtaResponse }
-     * 
-     */
-    public CreatePdtoOfertaPrVtaResponse createCreatePdtoOfertaPrVtaResponse() {
-        return new CreatePdtoOfertaPrVtaResponse();
     }
 
     /**
@@ -402,6 +418,22 @@ public class ObjectFactory {
      */
     public ProbabilidadVentaResponse createProbabilidadVentaResponse() {
         return new ProbabilidadVentaResponse();
+    }
+
+    /**
+     * Create an instance of {@link FinProcesoVenta }
+     * 
+     */
+    public FinProcesoVenta createFinProcesoVenta() {
+        return new FinProcesoVenta();
+    }
+
+    /**
+     * Create an instance of {@link FinProcesoVentaResponse }
+     * 
+     */
+    public FinProcesoVentaResponse createFinProcesoVentaResponse() {
+        return new FinProcesoVentaResponse();
     }
 
     /**
@@ -543,15 +575,6 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "JsonListProducto", scope = CreatePdtoOfertaPrVta.class)
-    public JAXBElement<String> createCreatePdtoOfertaPrVtaJsonListProducto(String value) {
-        return new JAXBElement<String>(_CreatePdtoOfertaPrVtaJsonListProducto_QNAME, String.class, CreatePdtoOfertaPrVta.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "GetAllPersonResult", scope = GetAllPersonResponse.class)
     public JAXBElement<String> createGetAllPersonResponseGetAllPersonResult(String value) {
         return new JAXBElement<String>(_GetAllPersonResponseGetAllPersonResult_QNAME, String.class, GetAllPersonResponse.class, value);
@@ -591,6 +614,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "JsonSolicitudVenta", scope = CreateSolicitudVenta.class)
     public JAXBElement<String> createCreateSolicitudVentaJsonSolicitudVenta(String value) {
         return new JAXBElement<String>(_CreateSolicitudVentaJsonSolicitudVenta_QNAME, String.class, CreateSolicitudVenta.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "FinProcesoVentaResult", scope = FinProcesoVentaResponse.class)
+    public JAXBElement<String> createFinProcesoVentaResponseFinProcesoVentaResult(String value) {
+        return new JAXBElement<String>(_FinProcesoVentaResponseFinProcesoVentaResult_QNAME, String.class, FinProcesoVentaResponse.class, value);
     }
 
 }

@@ -46,6 +46,10 @@
                             <a href="#"><center><img src="assets/img/file-document-outline.png" height="160" width="180"  alt="#"></center></a>
                             <span>Ingresar Pedidos</span>
                         </li>
+                        <li class="item i3">
+                            <a href="Configuracion.jsp"><center><img src="assets/img/tools.png" height="160" width="180" alt="#"></center></a>
+                            <span>Configuración</span>
+                        </li>
                         <li class="item i8">
                             <a href="ServletLogout"><center><img  src="assets/img/logout.png" height="160" width="180" align="left" alt="#"></center></a>
                             <span>Cerrar Sesión</span>

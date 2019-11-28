@@ -32,7 +32,7 @@
                     <span>Procesos de Venta</span>
                 </li>
                 <li class="item i3">
-                    <a href="#"><center><img src="assets/img/tools.png" height="160" width="180" alt="#"></center></a>
+                    <a href="Configuracion.jsp"><center><img src="assets/img/tools.png" height="160" width="180" alt="#"></center></a>
                     <span>Configuración</span>
                 </li>
                 <li class="item i8">

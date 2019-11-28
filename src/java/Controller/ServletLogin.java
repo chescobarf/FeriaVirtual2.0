@@ -22,7 +22,7 @@ import org.tempuri.OpenServices;
  * @author AlexanderArevalo
  */
 public class ServletLogin extends HttpServlet {
-    @WebServiceRef(wsdlLocation = "http://3.225.20.205/OpenServices.svc?wsdl")
+    @WebServiceRef(wsdlLocation = "http://3.225.20.205/CoreServicios/OpenServices.svc?wsdl")
     private OpenServices service;
 
     /**
@@ -66,6 +66,8 @@ public class ServletLogin extends HttpServlet {
                 sesion.setAttribute("usuario", respPer.getRut());
                 sesion.setAttribute("nombre", respPer.getNombre()+" "+respPer.getApellido());
                 sesion.setAttribute("perfil", respPer.getPerfil());
+                sesion.setAttribute("mail", respPer.getEmail());
+                sesion.setAttribute("dv", respPer.getDv());
                 
                 switch (respPer.getPerfil()) {
                     case 1:
