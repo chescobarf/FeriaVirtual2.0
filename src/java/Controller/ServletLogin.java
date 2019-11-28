@@ -66,6 +66,8 @@ public class ServletLogin extends HttpServlet {
                 sesion.setAttribute("usuario", respPer.getRut());
                 sesion.setAttribute("nombre", respPer.getNombre()+" "+respPer.getApellido());
                 sesion.setAttribute("perfil", respPer.getPerfil());
+                sesion.setAttribute("mail", respPer.getEmail());
+                sesion.setAttribute("dv", respPer.getDv());
                 
                 switch (respPer.getPerfil()) {
                     case 1:

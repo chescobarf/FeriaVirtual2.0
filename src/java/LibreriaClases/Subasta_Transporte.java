@@ -20,6 +20,15 @@ public class Subasta_Transporte {
     String Refrigeracion;
     String Estado;
 
+    public Subasta_Transporte() {
+        this.IdSubasta = 0;
+        this.FechaInicio = "";
+        this.FechaFin = "";
+        this.CapacidadCarga = 0;
+        this.Refrigeracion = "";
+        this.Estado = "";
+    }
+
     public Subasta_Transporte(int IdSubasta, String FechaInicio, String FechaFin, int CapacidadCarga, int TamanoCarga, String Refrigeracion, String Estado) {
         this.IdSubasta = IdSubasta;
         this.FechaInicio = FechaInicio;
@@ -95,9 +104,5 @@ public class Subasta_Transporte {
     public void setEstado(String Estado) {
         this.Estado = Estado;
     }
-
-
-  
-    
     
 }

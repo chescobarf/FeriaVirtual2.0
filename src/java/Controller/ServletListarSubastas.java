@@ -44,19 +44,20 @@ public class ServletListarSubastas extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        //Guarda en una lista los procesos de venta en JSON
+        //Guarda en una lista las Subastas en JSON
         String respJson = this.getAllSubTransporte();
         Type listType = new TypeToken<ArrayList<Subasta_Transporte>>(){}.getType();
         List<Subasta_Transporte> listadoSubastas = new Gson().fromJson(respJson, listType);
         
-        //Recorrer los procesos de venta y asignarlos en una nueva lista
+        //Recorrer las subastas y asignarlos en una nueva lista
         //ArrayList<String> SolicFruitPV = new ArrayList<String>();      
-        //Lista de proceso de venta local
+        //Lista de Subastas
         List<Subasta_Transporte> SolicSubastas = new ArrayList<Subasta_Transporte>();
         
         for (Subasta_Transporte temp : listadoSubastas) {
                 String estado = "";
                 String refrigeracion = "";
+                
                 
                 if("1".equals(temp.getEstado())){
                     estado = "Abierto";
@@ -69,8 +70,28 @@ public class ServletListarSubastas extends HttpServlet {
                 } else {
                     refrigeracion = "No Necesaria";
                 }
- 
-                Subasta_Transporte subTrans = new Subasta_Transporte(temp.getIdSubasta(),temp.getFechaInicio(),temp.getFechaFin(),temp.getCapacidadCarga(),temp.getTamanoCarga(),temp.getRefrigeracion(),temp.getEstado());
+                
+                //Se elimina la hora de la muestra de fechas
+                String fechaini = temp.getFechaInicio().substring(0,10);
+                String fechafin = temp.getFechaFin().substring(0,10);
+                
+                //Mostrar FechaInicial con formato dd/mm/yyyy
+                //String diai = fechaini.substring(3,4);
+                //String mesi = fechaini.substring(0,2);
+                //String anoi = fechaini.substring(5,9);
+                
+                //String feini = diai+"/"+mesi+"/"+anoi;
+                
+                //Mostrar FechaFin con formato dd/mm/yyyy
+                //String diaf = fechafin.substring(3,5);
+                //String mesf = fechafin.substring(0,2);
+                //String anof = fechafin.substring(6,10);
+                
+                //String fefin = diaf+"/"+mesf+"/"+anof;
+                
+                Subasta_Transporte subTrans = new  Subasta_Transporte(temp.getIdSubasta(),fechaini,fechafin,temp.getCapacidadCarga(),temp.getTamanoCarga(),temp.getRefrigeracion(),temp.getEstado());
+                
+                
                 
                 SolicSubastas.add(subTrans);
         }
