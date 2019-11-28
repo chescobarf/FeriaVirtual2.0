@@ -5,7 +5,6 @@
  */
 package Controller;
 
-import LibreriaClases.SolicitudProducto;
 import LibreriaClases.Subasta_Transporte;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -24,10 +23,10 @@ import org.tempuri.OpenServices;
 
 /**
  *
- * @author gerar
+ * @author xCobra
  */
-@WebServlet(name = "ServletListarSubastas", urlPatterns = {"/ServletListarSubastas"})
-public class ServletListarSubastas extends HttpServlet {
+@WebServlet(name = "ServletListarSubastasID", urlPatterns = {"/ServletListarSubastasID"})
+public class ServletListarSubastasID extends HttpServlet {
 
     @WebServiceRef(wsdlLocation = "http://3.225.20.205/OpenServices.svc?wsdl")
     private OpenServices service;
@@ -52,16 +51,18 @@ public class ServletListarSubastas extends HttpServlet {
         //Recorrer los procesos de venta y asignarlos en una nueva lista
         //ArrayList<String> SolicFruitPV = new ArrayList<String>();      
         //Lista de proceso de venta local
-        List<Subasta_Transporte> SolicSubastas = new ArrayList<Subasta_Transporte>();
+        int idpro = Integer.parseInt(request.getParameter("idSubasta"));
+        Subasta_Transporte subasta = null;
         
-        for (Subasta_Transporte temp : listadoSubastas) {
-                Subasta_Transporte subTrans = new Subasta_Transporte(temp.getIdSubasta(),temp.getFechaInicio(),temp.getFechaFin(),temp.getCapacidadCarga(),temp.getTamanoCarga(),temp.getRefrigeracion(),temp.getEstado());
+        for (int i = 0; i < listadoSubastas.size(); i++) {
+            if (idpro == listadoSubastas.get(i).getIdSubasta()) {
+                subasta = listadoSubastas.get(i);
                 
-                SolicSubastas.add(subTrans);
+            }
         }
         
-        request.setAttribute("subastas", SolicSubastas);
-        request.getRequestDispatcher("listarSubastas.jsp").forward(request, response);
+        request.setAttribute("subasta", subasta);
+        request.getRequestDispatcher("ingresarPrecioSubasta.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

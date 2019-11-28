@@ -101,7 +101,7 @@
                                         <td>Inactivo</td>
                                     </c:otherwise>
                                 </c:choose>
-                                <td><center><span class="btn btn-success"</span>Postular</a></center></td>
+                                        <td><a href="ServletListarSubastasID?idSubasta=${sub.getIdSubasta()}"><center><span class="btn btn-success"</span>Postular</a></center></a></td>
                             </tr>
                             </c:forEach>                       
                         </tbody>
