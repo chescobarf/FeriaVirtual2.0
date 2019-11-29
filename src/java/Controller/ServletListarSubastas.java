@@ -44,7 +44,8 @@ public class ServletListarSubastas extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         //Guarda en una lista las Subastas en JSON
         String respJson = this.getAllSubTransporte();
-        Type listType = new TypeToken<ArrayList<Subasta_Transporte>>(){}.getType();
+        Type listType = new TypeToken<ArrayList<Subasta_Transporte>>() {
+        }.getType();
         List<Subasta_Transporte> listadoSubastas = new Gson().fromJson(respJson, listType);
 
         //Recorrer las subastas y asignarlos en una nueva lista
@@ -53,45 +54,39 @@ public class ServletListarSubastas extends HttpServlet {
         List<Subasta_Transporte> SolicSubastas = new ArrayList<Subasta_Transporte>();
 
         for (Subasta_Transporte temp : listadoSubastas) {
-                String estado = "";
-                String refrigeracion = "";
+            String estado = "";
+            String refrigeracion = "";
 
+            if ("1".equals(temp.getEstado())) {
+                estado = "Abierto";
+            } else {
+                estado = "Cerrado";
+            }
 
-                if("1".equals(temp.getEstado())){
-                    estado = "Abierto";
-                } else {
-                    estado = "Cerrado";
-                }
+            if ("1".equals(temp.getRefrigeracion())) {
+                refrigeracion = "Necesaria";
+            } else {
+                refrigeracion = "No Necesaria";
+            }
 
-                if("1".equals(temp.getRefrigeracion())){
-                    refrigeracion = "Necesaria";
-                } else {
-                    refrigeracion = "No Necesaria";
-                }
+            //Se elimina la hora de la muestra de fechas
+            String fechaini = temp.getFechaInicio().substring(0, 10);
+            String fechafin = temp.getFechaFin().substring(0, 10);
 
-                //Se elimina la hora de la muestra de fechas
-                String fechaini = temp.getFechaInicio().substring(0,10);
-                String fechafin = temp.getFechaFin().substring(0,10);
+            //Mostrar FechaInicial con formato dd/mm/yyyy
+            //String diai = fechaini.substring(3,4);
+            //String mesi = fechaini.substring(0,2);
+            //String anoi = fechaini.substring(5,9);
+            //String feini = diai+"/"+mesi+"/"+anoi;
+            //Mostrar FechaFin con formato dd/mm/yyyy
+            //String diaf = fechafin.substring(3,5);
+            //String mesf = fechafin.substring(0,2);
+            //String anof = fechafin.substring(6,10);
+            //String fefin = diaf+"/"+mesf+"/"+anof;
+            Subasta_Transporte subTrans = new Subasta_Transporte(temp.getIdSubasta(), fechaini, fechafin, temp.getCapacidadCarga(), temp.getTamanoCarga(), temp.getRefrigeracion(), temp.getEstado());
 
-                //Mostrar FechaInicial con formato dd/mm/yyyy
-                //String diai = fechaini.substring(3,4);
-                //String mesi = fechaini.substring(0,2);
-                //String anoi = fechaini.substring(5,9);
-
-                //String feini = diai+"/"+mesi+"/"+anoi;
-
-                //Mostrar FechaFin con formato dd/mm/yyyy
-                //String diaf = fechafin.substring(3,5);
-                //String mesf = fechafin.substring(0,2);
-                //String anof = fechafin.substring(6,10);
-
-                //String fefin = diaf+"/"+mesf+"/"+anof;
-
-                Subasta_Transporte subTrans = new  Subasta_Transporte(temp.getIdSubasta(),fechaini,fechafin,temp.getCapacidadCarga(),temp.getTamanoCarga(),temp.getRefrigeracion(),temp.getEstado());
-
-                //temp.getFechaInicio(),temp.getFechaFin()
-
-                SolicSubastas.add(subTrans);
+            //temp.getFechaInicio(),temp.getFechaFin()
+            SolicSubastas.add(subTrans);
         }
 
         request.setAttribute("subastas", SolicSubastas);
@@ -143,6 +138,5 @@ public class ServletListarSubastas extends HttpServlet {
         org.tempuri.IOpenServices port = service.getBasicHttpBindingIOpenServices();
         return port.getAllSubTransporte();
     }
-
 
 }

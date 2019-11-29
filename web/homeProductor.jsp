@@ -19,8 +19,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-6" style="margin-left: -100px; margin-top: 1%;">
-                    <img src="assets/img/account-outline.png" width="120" height="120" alt="${sessionScope.nombre}"/>
-                    <label style="color:#FFF; font-size: 20px;"><b>${sessionScope.nombre}</b></label>
+                    <img src="assets/img/account-outline.png" width="120" height="120"/>
+                    <label style="color:#FFF; font-size: 20px;"><h3 class="letra">Bienvenido</h3><b><h3>${sessionScope.nombre}</h3></b></label>
                 </div>
                 <div class="col-6">
                     <a href="homeProductor.jsp"><img class="logo" src="assets/img/Logo.PNG" width="200" height="120" alt="Feria Virtual"/></a>
@@ -34,6 +34,10 @@
                 <li class="item i3">
                     <a href="Configuracion.jsp"><center><img src="assets/img/tools.png" height="160" width="180" alt="#"></center></a>
                     <span>Configuración</span>
+                </li>
+                <li class="item i8">
+                    <a href="#"><center><img  src="assets/img/chart-areaspline.png" height="160" width="180" align="left" alt="#"></center></a>
+                    <span>Forma de Pago</span>
                 </li>
                 <li class="item i8">
                     <a href="ServletLogout"><center><img  src="assets/img/logout.png" height="160" width="180" align="left" alt="#"></center></a>
