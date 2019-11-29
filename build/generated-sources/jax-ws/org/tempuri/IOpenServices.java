@@ -149,6 +149,17 @@ public interface IOpenServices {
 
     /**
      * 
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod(operationName = "GetAllContratos", action = "http://tempuri.org/IOpenServices/GetAllContratos")
+    @WebResult(name = "GetAllContratosResult", targetNamespace = "http://tempuri.org/")
+    @RequestWrapper(localName = "GetAllContratos", targetNamespace = "http://tempuri.org/", className = "org.tempuri.GetAllContratos")
+    @ResponseWrapper(localName = "GetAllContratosResponse", targetNamespace = "http://tempuri.org/", className = "org.tempuri.GetAllContratosResponse")
+    public String getAllContratos();
+
+    /**
+     * 
      * @param proVentaJson
      * @param solicitud
      * @param productosJson
@@ -177,6 +188,20 @@ public interface IOpenServices {
     @RequestWrapper(localName = "GetAllProVenta", targetNamespace = "http://tempuri.org/", className = "org.tempuri.GetAllProVenta")
     @ResponseWrapper(localName = "GetAllProVentaResponse", targetNamespace = "http://tempuri.org/", className = "org.tempuri.GetAllProVentaResponse")
     public String getAllProVenta();
+
+    /**
+     * 
+     * @param idPv
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod(operationName = "GetProVtaById", action = "http://tempuri.org/IOpenServices/GetProVtaById")
+    @WebResult(name = "GetProVtaByIdResult", targetNamespace = "http://tempuri.org/")
+    @RequestWrapper(localName = "GetProVtaById", targetNamespace = "http://tempuri.org/", className = "org.tempuri.GetProVtaById")
+    @ResponseWrapper(localName = "GetProVtaByIdResponse", targetNamespace = "http://tempuri.org/", className = "org.tempuri.GetProVtaByIdResponse")
+    public String getProVtaById(
+        @WebParam(name = "idPv", targetNamespace = "http://tempuri.org/")
+        Integer idPv);
 
     /**
      * 
@@ -250,6 +275,20 @@ public interface IOpenServices {
 
     /**
      * 
+     * @param jsonOferta
+     * @return
+     *     returns java.lang.Boolean
+     */
+    @WebMethod(operationName = "CreateOfertaSub", action = "http://tempuri.org/IOpenServices/CreateOfertaSub")
+    @WebResult(name = "CreateOfertaSubResult", targetNamespace = "http://tempuri.org/")
+    @RequestWrapper(localName = "CreateOfertaSub", targetNamespace = "http://tempuri.org/", className = "org.tempuri.CreateOfertaSub")
+    @ResponseWrapper(localName = "CreateOfertaSubResponse", targetNamespace = "http://tempuri.org/", className = "org.tempuri.CreateOfertaSubResponse")
+    public Boolean createOfertaSub(
+        @WebParam(name = "JsonOferta", targetNamespace = "http://tempuri.org/")
+        String jsonOferta);
+
+    /**
+     * 
      * @param subastaJson
      * @return
      *     returns java.lang.Boolean
@@ -272,6 +311,20 @@ public interface IOpenServices {
     @RequestWrapper(localName = "GetAllSubTransporte", targetNamespace = "http://tempuri.org/", className = "org.tempuri.GetAllSubTransporte")
     @ResponseWrapper(localName = "GetAllSubTransporteResponse", targetNamespace = "http://tempuri.org/", className = "org.tempuri.GetAllSubTransporteResponse")
     public String getAllSubTransporte();
+
+    /**
+     * 
+     * @param idProVta
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod(operationName = "GetSolbyIdPrVt", action = "http://tempuri.org/IOpenServices/GetSolbyIdPrVt")
+    @WebResult(name = "GetSolbyIdPrVtResult", targetNamespace = "http://tempuri.org/")
+    @RequestWrapper(localName = "GetSolbyIdPrVt", targetNamespace = "http://tempuri.org/", className = "org.tempuri.GetSolbyIdPrVt")
+    @ResponseWrapper(localName = "GetSolbyIdPrVtResponse", targetNamespace = "http://tempuri.org/", className = "org.tempuri.GetSolbyIdPrVtResponse")
+    public String getSolbyIdPrVt(
+        @WebParam(name = "idProVta", targetNamespace = "http://tempuri.org/")
+        Integer idProVta);
 
     /**
      * 

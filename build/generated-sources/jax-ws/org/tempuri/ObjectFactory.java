@@ -33,14 +33,18 @@ public class ObjectFactory {
     private final static QName _GetAllFrutaResponseGetAllFrutaResult_QNAME = new QName("http://tempuri.org/", "GetAllFrutaResult");
     private final static QName _GetContratoUserResponseGetContratoUserResult_QNAME = new QName("http://tempuri.org/", "GetContratoUserResult");
     private final static QName _CreateContratoContratoJson_QNAME = new QName("http://tempuri.org/", "contratoJson");
+    private final static QName _GetAllContratosResponseGetAllContratosResult_QNAME = new QName("http://tempuri.org/", "GetAllContratosResult");
     private final static QName _CreateProVentaProVentaJson_QNAME = new QName("http://tempuri.org/", "proVentaJson");
     private final static QName _CreateProVentaProductosJson_QNAME = new QName("http://tempuri.org/", "productosJson");
     private final static QName _GetAllProVentaResponseGetAllProVentaResult_QNAME = new QName("http://tempuri.org/", "GetAllProVentaResult");
+    private final static QName _GetProVtaByIdResponseGetProVtaByIdResult_QNAME = new QName("http://tempuri.org/", "GetProVtaByIdResult");
     private final static QName _GetAllProductPVResponseGetAllProductPVResult_QNAME = new QName("http://tempuri.org/", "GetAllProductPVResult");
     private final static QName _CreateOfertaPrVtaJsonProcesoVTA_QNAME = new QName("http://tempuri.org/", "JsonProcesoVTA");
     private final static QName _GetAllPersonResponseGetAllPersonResult_QNAME = new QName("http://tempuri.org/", "GetAllPersonResult");
+    private final static QName _CreateOfertaSubJsonOferta_QNAME = new QName("http://tempuri.org/", "JsonOferta");
     private final static QName _CreateSubTransporteSubastaJson_QNAME = new QName("http://tempuri.org/", "subastaJson");
     private final static QName _GetAllSubTransporteResponseGetAllSubTransporteResult_QNAME = new QName("http://tempuri.org/", "GetAllSubTransporteResult");
+    private final static QName _GetSolbyIdPrVtResponseGetSolbyIdPrVtResult_QNAME = new QName("http://tempuri.org/", "GetSolbyIdPrVtResult");
     private final static QName _GetAllSolicitudVentaActResponseGetAllSolicitudVentaActResult_QNAME = new QName("http://tempuri.org/", "GetAllSolicitudVentaActResult");
     private final static QName _CreateSolicitudVentaJsonSolicitudVenta_QNAME = new QName("http://tempuri.org/", "JsonSolicitudVenta");
     private final static QName _FinProcesoVentaResponseFinProcesoVentaResult_QNAME = new QName("http://tempuri.org/", "FinProcesoVentaResult");
@@ -197,6 +201,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetAllContratos }
+     * 
+     */
+    public GetAllContratos createGetAllContratos() {
+        return new GetAllContratos();
+    }
+
+    /**
+     * Create an instance of {@link GetAllContratosResponse }
+     * 
+     */
+    public GetAllContratosResponse createGetAllContratosResponse() {
+        return new GetAllContratosResponse();
+    }
+
+    /**
      * Create an instance of {@link CreateProVenta }
      * 
      */
@@ -226,6 +246,22 @@ public class ObjectFactory {
      */
     public GetAllProVentaResponse createGetAllProVentaResponse() {
         return new GetAllProVentaResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetProVtaById }
+     * 
+     */
+    public GetProVtaById createGetProVtaById() {
+        return new GetProVtaById();
+    }
+
+    /**
+     * Create an instance of {@link GetProVtaByIdResponse }
+     * 
+     */
+    public GetProVtaByIdResponse createGetProVtaByIdResponse() {
+        return new GetProVtaByIdResponse();
     }
 
     /**
@@ -309,6 +345,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link CreateOfertaSub }
+     * 
+     */
+    public CreateOfertaSub createCreateOfertaSub() {
+        return new CreateOfertaSub();
+    }
+
+    /**
+     * Create an instance of {@link CreateOfertaSubResponse }
+     * 
+     */
+    public CreateOfertaSubResponse createCreateOfertaSubResponse() {
+        return new CreateOfertaSubResponse();
+    }
+
+    /**
      * Create an instance of {@link CreateSubTransporte }
      * 
      */
@@ -338,6 +390,22 @@ public class ObjectFactory {
      */
     public GetAllSubTransporteResponse createGetAllSubTransporteResponse() {
         return new GetAllSubTransporteResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetSolbyIdPrVt }
+     * 
+     */
+    public GetSolbyIdPrVt createGetSolbyIdPrVt() {
+        return new GetSolbyIdPrVt();
+    }
+
+    /**
+     * Create an instance of {@link GetSolbyIdPrVtResponse }
+     * 
+     */
+    public GetSolbyIdPrVtResponse createGetSolbyIdPrVtResponse() {
+        return new GetSolbyIdPrVtResponse();
     }
 
     /**
@@ -530,6 +598,15 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "GetAllContratosResult", scope = GetAllContratosResponse.class)
+    public JAXBElement<String> createGetAllContratosResponseGetAllContratosResult(String value) {
+        return new JAXBElement<String>(_GetAllContratosResponseGetAllContratosResult_QNAME, String.class, GetAllContratosResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "proVentaJson", scope = CreateProVenta.class)
     public JAXBElement<String> createCreateProVentaProVentaJson(String value) {
         return new JAXBElement<String>(_CreateProVentaProVentaJson_QNAME, String.class, CreateProVenta.class, value);
@@ -551,6 +628,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "GetAllProVentaResult", scope = GetAllProVentaResponse.class)
     public JAXBElement<String> createGetAllProVentaResponseGetAllProVentaResult(String value) {
         return new JAXBElement<String>(_GetAllProVentaResponseGetAllProVentaResult_QNAME, String.class, GetAllProVentaResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "GetProVtaByIdResult", scope = GetProVtaByIdResponse.class)
+    public JAXBElement<String> createGetProVtaByIdResponseGetProVtaByIdResult(String value) {
+        return new JAXBElement<String>(_GetProVtaByIdResponseGetProVtaByIdResult_QNAME, String.class, GetProVtaByIdResponse.class, value);
     }
 
     /**
@@ -584,6 +670,15 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "JsonOferta", scope = CreateOfertaSub.class)
+    public JAXBElement<String> createCreateOfertaSubJsonOferta(String value) {
+        return new JAXBElement<String>(_CreateOfertaSubJsonOferta_QNAME, String.class, CreateOfertaSub.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "subastaJson", scope = CreateSubTransporte.class)
     public JAXBElement<String> createCreateSubTransporteSubastaJson(String value) {
         return new JAXBElement<String>(_CreateSubTransporteSubastaJson_QNAME, String.class, CreateSubTransporte.class, value);
@@ -596,6 +691,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "GetAllSubTransporteResult", scope = GetAllSubTransporteResponse.class)
     public JAXBElement<String> createGetAllSubTransporteResponseGetAllSubTransporteResult(String value) {
         return new JAXBElement<String>(_GetAllSubTransporteResponseGetAllSubTransporteResult_QNAME, String.class, GetAllSubTransporteResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "GetSolbyIdPrVtResult", scope = GetSolbyIdPrVtResponse.class)
+    public JAXBElement<String> createGetSolbyIdPrVtResponseGetSolbyIdPrVtResult(String value) {
+        return new JAXBElement<String>(_GetSolbyIdPrVtResponseGetSolbyIdPrVtResult_QNAME, String.class, GetSolbyIdPrVtResponse.class, value);
     }
 
     /**

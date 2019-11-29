@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="row justify-content-center" align="center">
-                <form action="ingresarProductos.jsp" method="post">
+                <form action="ServletOfertaSubasta" method="post">
                     <label style="color:#FFF; font-size: 20px;"><b>Proceso de Subasta de Transporte - Seleccionada:</b></label>
                     <div class="card" style="width: 35rem;">
                         <div class="card-body">
@@ -83,10 +83,13 @@
                         </ul>
                         <div class="card-body">
                           <h4>Precio a ofertar</h4>
-                          <input type="number" class="form-control mb-2 mr-sm-2" name="numero" id="numero" min="990" max="9999999" placeholder="$ Cantidad en pesos">
-                          <a href="#" class="btn btn-success">Ofertar</a>
+                          <input type="number" class="form-control mb-2 mr-sm-2" name="costo" id="numero" min="990" max="9999999" placeholder="$ Cantidad en pesos" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                          
+                          <button type="submit" class="btn btn-success">Ofertar</button>
                         </div>
                     </div> 
+                    <input value="${sessionScope.usuario}" type="text" name="rut" style="visibility:hidden">
+                    <input value="${subasta.getIdSubasta()}" type="text" name="idSubasta" style="visibility:hidden">
                 </form>
             </div>          
         </div>    
